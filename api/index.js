@@ -4,7 +4,7 @@ import express from "express";
 const app = express();
 
 app.get("/eslam", (req, res) => {
-    res.send("eslam")
+    res.status(200).json("eslam")
 })
 
 app.listen(3000, () => {
