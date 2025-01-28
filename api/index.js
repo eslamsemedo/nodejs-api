@@ -3,7 +3,7 @@ import express from "express";
 
 const app = express();
 
-app.post("/eslam", (req, res) => {
+app.get("/eslam", (req, res) => {
     res.send("eslam")
 })
 
