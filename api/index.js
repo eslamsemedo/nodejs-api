@@ -1,15 +1,17 @@
 import express from "express";
-
+import cors from 'cors';
 
 const app = express();
 
-// app.use(cors({
-//     origin: 'http://localhost:5173',  // Your React dev origin
-//     methods: ['GET', 'POST', 'OPTIONS'],
-// }));
+// Enable CORS
+app.use(cors({
+    origin: 'https://new-retal.vercel.app', // Replace with your React app's URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true, // Allow cookies or authorization headers
+}));
 
 app.get("/retal", (req, res) => {
-    req.body
+    // req.body
     res.status(200).json("eslam")
 })
 
